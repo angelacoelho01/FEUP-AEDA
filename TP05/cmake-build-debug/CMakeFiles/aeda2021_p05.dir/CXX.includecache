@@ -9,17 +9,15 @@
 /home/angela/Desktop/MIEIC/2nd Year/AEDA/AEDA-TPs/TP05/Tests/game.cpp
 game.h
 /home/angela/Desktop/MIEIC/2nd Year/AEDA/AEDA-TPs/TP05/Tests/game.h
+
+/home/angela/Desktop/MIEIC/2nd Year/AEDA/AEDA-TPs/TP05/Tests/game.h
+kid.h
+/home/angela/Desktop/MIEIC/2nd Year/AEDA/AEDA-TPs/TP05/Tests/kid.h
 cstdlib
 -
 ctime
 -
 iostream
--
-
-/home/angela/Desktop/MIEIC/2nd Year/AEDA/AEDA-TPs/TP05/Tests/game.h
-kid.h
-/home/angela/Desktop/MIEIC/2nd Year/AEDA/AEDA-TPs/TP05/Tests/kid.h
-stdlib.h
 -
 list
 -

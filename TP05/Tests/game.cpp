@@ -1,7 +1,5 @@
 #include "game.h"
-#include <cstdlib>
-#include <ctime>
-#include <iostream>
+
 using namespace std;
 
 
@@ -19,25 +17,20 @@ unsigned int Game::numberOfWords(string phrase)
     return n;
 }
 
-// TODO
 Game::Game() :
     kids(list<Kid>()){}
 
-// TODO
 Game::Game(list<Kid>& l2) :
     kids(l2){}
 
-//Insert a kid to the end of the list
 void Game::addKid(const Kid &k1){
     kids.insert(kids.end(), k1);
 }
 
-// TODO
 list<Kid> Game::getKids() const{
     return kids;
 }
 
-// TODO
 string Game::write() const{
     ostringstream out;
     for(const auto& kid : kids)
@@ -45,7 +38,6 @@ string Game::write() const{
     return out.str();
 }
 
-// TODO
 Kid& Game::loseGame(string phrase)
 {
     auto it = kids.begin();
@@ -55,8 +47,7 @@ Kid& Game::loseGame(string phrase)
         for(int i = 1; i < numberOfWords(phrase); i++){
             if(it == itEnd)
                 it = kids.begin();
-            else
-                it++;
+            else it++;
         }
         kids.erase(it);
         it = kids.begin();
@@ -64,41 +55,33 @@ Kid& Game::loseGame(string phrase)
     return *it;
 }
 
-// TODO
 list<Kid>& Game::reverse(){
-    kids.reverse();
-    return kids;
+    kids.reverse(); return kids;
 }
 
-// TODO
 list<Kid> Game::removeOlder(unsigned id){
     list<Kid> result;
     auto it = kids.begin();
-    while(it != kids.end()){
-        if(it->getAge() > id){
+    while(it != kids.end()) {
+        if (it->getAge() > id) {
             result.push_back(*it);
             kids.erase(it);
             it = kids.begin();
         }
-        else
-            it++;
+        else it++;
     }
-
     return result;
 }
 
-// TODO
 void Game::setKids(const list<Kid>& l1){
     kids = l1;
 }
 
-// TODO
 bool Game::operator==(Game& g2)
 {
     return kids == g2.getKids();
 }
 
-// TODO
 list<Kid> Game::shuffle() const
 {
     list<Kid> result;
