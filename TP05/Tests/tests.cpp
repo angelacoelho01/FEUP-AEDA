@@ -85,17 +85,9 @@ TEST(test, c_loseGame){
     game1.addKid(c5);
     game1.addKid(c6);
 
-    string s = "Pim Pam Pum cada bola mata um pra galinha e pro peru quem se livra es mesmo tu";
+    string s = "pim pam pum pim";
     Kid cx = game1.loseGame(s);
-    EXPECT_EQ("Rui", cx.getName());
-
-    Game game2;
-    s = "Pim Pam Pum";
-    game2.addKid(c1);
-    game2.addKid(c2);
-    game2.addKid(c3);
-    cx = game2.loseGame(s);
-    EXPECT_EQ("Ana", cx.getName());
+    EXPECT_EQ("Marta", cx.getName());
 }
 
 TEST(test, d_reverseGame){

@@ -38,21 +38,19 @@ string Game::write() const{
     return out.str();
 }
 
-Kid& Game::loseGame(string phrase)
+Kid& Game::loseGame(string& phrase)
 {
     auto it = kids.begin();
+    auto removeIt = it;
     while(kids.size() != 1){
-        auto itEnd = kids.end();
-        itEnd--;
-        for(int i = 1; i < numberOfWords(phrase); i++){
-            if(it == itEnd)
-                it = kids.begin();
-            else it++;
-        }
-        kids.erase(it);
-        it = kids.begin();
+        std::advance(it, numberOfWords(phrase)-1);
+        if(it == kids.end()) it=kids.begin();
+        removeIt = it;
+        it++;
+        if(it == kids.end()) it=kids.begin();
+        kids.erase(removeIt);
     }
-    return *it;
+    return kids.front();
 }
 
 list<Kid>& Game::reverse(){

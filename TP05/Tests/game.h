@@ -27,6 +27,8 @@ public:
     list<Kid> removeOlder(unsigned id);
     bool operator==(Game& g2);
     list<Kid> shuffle() const;
+
+    Kid &loseGame(string &phrase);
 };
 
 #endif /* GAME_H_ */
