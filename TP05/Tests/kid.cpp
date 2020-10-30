@@ -3,14 +3,11 @@
 Kid::Kid(): name(""), age(0)
 {}
 
-Kid::Kid(string nm, unsigned a): name(nm), age(a)
-{}
+Kid::Kid(string nm, unsigned a):
+    name(nm), age(a) {}
 
-Kid::Kid(const Kid& k1)
-{
-    this->name = k1.name;
-    this->age = k1.age;
-}
+Kid::Kid(const Kid& k1):
+    name(k1.name), age(k1.age){}
 
 string Kid::getName() const
 {

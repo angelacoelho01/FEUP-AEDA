@@ -2,8 +2,11 @@
 #define GAME_H_
 
 #include "kid.h"
+
+#include <stdlib.h>
 #include <list>
 #include <string>
+
 using namespace std;
 
 class Game
