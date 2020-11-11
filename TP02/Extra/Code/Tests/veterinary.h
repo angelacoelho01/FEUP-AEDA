@@ -8,10 +8,9 @@ class Veterinary {
     string name;
     long codOrder;
 public:
-    //Veterinary(string nome, int cod);
+    Veterinary(string nome, int cod);
     string getName() const;
-    //string getInfo() const;
+    string getInfo() const;
 };
-
 
 #endif /* SRC_VETERINARY_H_ */
