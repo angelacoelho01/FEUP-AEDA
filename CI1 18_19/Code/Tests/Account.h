@@ -1,14 +1,10 @@
-/*
- * Account.h
- */
-
 #ifndef SRC_ACCOUNT_H_
 #define SRC_ACCOUNT_H_
 
 #include <string>
 #include<iostream>
-using namespace std;
 
+using namespace std;
 
 class Account {
 protected:
@@ -23,6 +19,7 @@ public:
 	string getCodIBAN() const;
 	double getBalance() const;
 	//...
+	virtual double getWithdraw() const;
 
 };
 
@@ -32,6 +29,7 @@ class CheckingAccount: public Account {
 public:
 	CheckingAccount (string hold, string codeH, string codeA, double bal, double lim);
 	//...
+	double getCharge() const;
 
 };
 
@@ -42,6 +40,7 @@ protected:
 public:
 	SavingsAccount(string hold, string codeH, string codeA, double bal, double pct); //pct = percentage interest rate
 	//...
+	double getCharge() const;
 
 };
 
@@ -51,6 +50,7 @@ class TimeAccount: public SavingsAccount {
 public:
 	TimeAccount(string hold, string codeH, string codeA, double bal, double pct);
 	//...
+	double getWithdraw() const;
 
 };
 

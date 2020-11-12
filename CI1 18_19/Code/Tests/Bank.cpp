@@ -1,10 +1,4 @@
-/*
- * Bank.cpp
- */
-
 #include "Bank.h"
-#include <algorithm>
-#include <string>
 
 Bank::Bank() {}
 
@@ -27,27 +21,43 @@ vector<Account *> Bank::getAccounts() const {
 
 // ----------------------------------------------------------------------------------------------
 
-// a alterar
+
 double Bank::getWithdraw(string cod1) const{
-	return 0;
+    double total = 0;
+	for(const auto & account : accounts){
+	    if(account->getCodH() == cod1)
+            total += account->getWithdraw();
+	}
+	return total;
 }
 
-
-// a alterar
 vector<Account *> Bank::removeBankOfficer(string name){
-	vector<Account *> res;
-	return res;
+	vector<Account *> officerAccounts;
+    for(auto it = bankOfficers.begin(); it != bankOfficers.end(); it++){
+        if(it->getName() == name){
+            officerAccounts = it->getAccounts();
+            bankOfficers.erase(it);
+            return officerAccounts;
+        }
+    }
+    return officerAccounts;
 }
 
-
-// a alterar
 const BankOfficer & Bank::addAccountToBankOfficer(Account *ac, string name) {
-    BankOfficer *bo= new BankOfficer();
-    return *bo;
+    for(auto it = bankOfficers.begin(); it != bankOfficers.end(); it++){
+        if(name == it->getName()) {
+            it->addAccount(ac);
+            return *it;
+        }
+    }
+    throw NoBankOfficerException(name);
 }
 
-
-// a alterar
 void Bank::sortAccounts() {
+    sort(accounts.begin(), accounts.end(), [](Account* ac1, Account* ac2){
+        if(ac1->getBalance() == ac2->getBalance())
+            return ac1->getCodIBAN() < ac2->getCodIBAN();
+        return ac1->getBalance() < ac2->getBalance();
+    });
 }
 

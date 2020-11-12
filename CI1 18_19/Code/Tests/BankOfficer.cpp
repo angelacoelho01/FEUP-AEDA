@@ -1,8 +1,6 @@
-/*
- * BankOfficer.cpp
- */
 #include "BankOfficer.h"
 
+unsigned int BankOfficer::idBankOfficers = 1;
 
 BankOfficer::BankOfficer(): id(0) {}
 
@@ -29,9 +27,15 @@ unsigned int BankOfficer::getID() const{
 
 // ----------------------------------------------------------------------------------------------
 
-// a alterar
-BankOfficer::BankOfficer(string name) {
+
+BankOfficer::BankOfficer(string name)
+    : name(name), id(idBankOfficers++), myAccounts(vector<Account*>()){
 }
 
+bool BankOfficer::operator>(const BankOfficer &bo2) {
+    if(myAccounts.size() == bo2.getAccounts().size())
+        return name > bo2.getName();
+    return myAccounts.size() > bo2.getAccounts().size();
+}
 
 

@@ -1,11 +1,8 @@
-/*
- * BankOfficer.h
- */
-
 #ifndef SRC_BANKOFFICER_H_
 #define SRC_BANKOFFICER_H_
 
 #include "Account.h"
+
 #include <string>
 #include <vector>
 
@@ -13,6 +10,7 @@ class BankOfficer {
 	unsigned int id;
 	string name;
 	vector<Account *> myAccounts;
+
 public:
 	BankOfficer();
 	void setName(string nm);
@@ -23,8 +21,10 @@ public:
 	unsigned int getID() const;
 
 	//-------
-	BankOfficer(string nm);
+    static unsigned int idBankOfficers;
+    BankOfficer(string nm);
 	vector<Account *> removeBankOfficer(string name);
+	bool operator>(const BankOfficer& bo2);
 };
 
 #endif /* SRC_BANKOFFICER_H_ */
