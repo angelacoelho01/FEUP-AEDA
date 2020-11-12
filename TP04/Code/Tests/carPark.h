@@ -1,9 +1,14 @@
 #ifndef CARPARK_H_
 #define CARPARK_H_
 
+#include "insertionSort.h"
+#include "sequentialSearch.h"
+
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm>
+
 using namespace std;
 
 class InfoCard {
@@ -11,6 +16,8 @@ public:
     string name;
     bool present;
     int frequency;
+    bool operator==(const InfoCard& I2) const;
+    bool operator<(const InfoCard& I2) const;
 };
 
 class CarPark {
@@ -36,6 +43,22 @@ public:
     void sortClientsByFrequency();
     void sortClientsByName();
     vector<string> clientsBetween(unsigned f1, unsigned f2);
+};
+
+class ClientDoesNotExist{
+private:
+    string _name;
+public:
+    ClientDoesNotExist(const string& name);
+    string getName() const;
+};
+
+class PositionDoesNotExist{
+private:
+    unsigned int _position;
+public:
+    PositionDoesNotExist(unsigned int position);
+    unsigned int getPosition() const;
 };
 
 #endif /*CARPARK_H_*/
