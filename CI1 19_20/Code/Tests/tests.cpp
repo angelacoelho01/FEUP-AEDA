@@ -64,7 +64,7 @@ TEST(test_1, test_c){
     }
 }
 
-/*TEST(test_1, test_d){
+TEST(test_1, test_d){
     try {
         RegularRoom *rr1 = new RegularRoom("rr1", 1);
         rr1->setLength(350);
@@ -101,9 +101,9 @@ TEST(test_1, test_c){
     catch(...) {
         EXPECT_EQ(true,false);
     }
-}*/
+}
 
-/*TEST(test_1, test_e){
+TEST(test_1, test_e){
     try {
         RegularRoom *rr1 = new RegularRoom("rr1", 1);
         FamilyRoom *fr2 = new FamilyRoom("fr2", 1);
@@ -125,9 +125,9 @@ TEST(test_1, test_c){
     catch(...) {
         EXPECT_EQ(true,false);
     }
-}*/
+}
 
-/*TEST(test_1, test_f){
+TEST(test_1, test_f){
     try {
         RegularRoom *rr1 = new RegularRoom("rr1", 1);
         rr1->setWidth(300);
@@ -158,9 +158,9 @@ TEST(test_1, test_c){
     catch(...) {
         EXPECT_EQ(true,false);
     }
-}*/
+}
 
-/*TEST(test_1, test_g){
+TEST(test_1, test_g){
     try {
         RegularRoom *rr1 = new RegularRoom("rr1", 1);
         FamilyRoom *fr2 = new FamilyRoom("fr2", 1);
@@ -188,9 +188,8 @@ TEST(test_1, test_c){
     catch(...) {
         EXPECT_EQ(true,false);
     }
-}*/
+}
 
-/*
 TEST(test_1, test_h){
     try {
         RegularRoom *rr1 = new RegularRoom("rr1", 1);
@@ -225,4 +224,4 @@ TEST(test_1, test_h){
     catch(...) {
         EXPECT_EQ(true,false);
     }
-}*/
+}

@@ -1,4 +1,4 @@
-# Install script for directory: /home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/Test 19_20/Code/lib/googletest-master
+# Install script for directory: /home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1 19_20/Code/lib/googletest-master
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/Test 19_20/Code/cmake-build-debug/lib/googletest-master/googlemock/cmake_install.cmake")
+  include("/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1 19_20/Code/cmake-build-debug/lib/googletest-master/googlemock/cmake_install.cmake")
 
 endif()
 

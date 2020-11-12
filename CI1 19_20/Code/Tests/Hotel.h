@@ -89,43 +89,77 @@ bool Hotel<Chamber>::addChamber(Chamber *chamber) {
 //TODO
 template<class Chamber>
 void Hotel<Chamber>::sortChambers() {
-/*    std::vector<Chamber*> temp;
-    for(unsigned int p=1; p < chambers.size(); p++){
+    std::sort(chambers.begin(), chambers.end(), [](Chamber* c1, Chamber* c2){
+       if(c1->getCode() == c2->getCode())
+           return c1->getFloor() > c2->getFloor();
+       return c1->getCode() < c2->getCode();
+    });
 
-    } */
 }
 
 //TODO
 template<class Chamber>
 Chamber* Hotel<Chamber>::removeChamber(std::string code, int floor) {
-    return NULL;
+    Chamber chamber(code, floor);
+    for(unsigned int i=0; i < chambers.size(); i++){
+        if(*(chambers.at(i)) == chamber){
+            Chamber* chamberRemoved = chambers.at(i);
+            chambers.erase(chambers.begin()+i);
+            return chamberRemoved;
+        }
+    }
+    throw NoSuchChamberException();
 }
+
+//TODO
+class NoSuchFloorException {
+private:
+    int _floor;
+public:
+    NoSuchFloorException(int floor) : _floor(floor){};
+    int getFloor() { return _floor;}
+};
 
 //TODO
 template<class Chamber>
 float Hotel<Chamber>::avgArea(int floor) const {
-    return 0.0;
+    float sum = 0; int count = 0;
+    for(const auto& chamber : chambers){
+        if(chamber->getFloor() == floor) {
+            sum += chamber->getArea();
+            count++;
+        }
+    }
+    if(count == 0) throw NoSuchFloorException(floor);
+    return sum/count;
 }
 
 //TODO
 template<class Chamber>
 bool Hotel<Chamber>::doReservation(std::string code, int floor){
+    for(const auto& ch : chambers){
+        if(*ch == Chamber(code, floor)) {
+            if(ch->getReservation()) return false;
+            ch->setReservation(true);
+            reservationsDone.push_back(*ch);
+            return true;
+        }
+    }
     return false;
 }
 
 //TODO
 template<class Chamber>
 std::list<Chamber> Hotel<Chamber>::roomsNeverReserved() const {
-    std::list<Chamber> res;
-    return res;
+    std::list<Chamber> rooms;
+    for(const auto& ch : chambers){
+        bool found = false;
+        for(auto it = reservationsDone.begin(); it != reservationsDone.end(); it++){
+            if(*it == *ch) found = true;
+        }
+        if(!found) rooms.push_back(*ch);
+    }
+    return rooms;
 }
-
-
-//TODO
-class NoSuchFloorException {
-public:
-    int getFloor() { return 0;}
-};
-
 
 #endif /* SRC_HOTEL_H_ */

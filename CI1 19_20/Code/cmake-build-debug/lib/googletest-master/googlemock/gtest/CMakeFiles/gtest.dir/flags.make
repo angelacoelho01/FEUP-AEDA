@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTH
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/Test 19_20/Code/lib/googletest-master/googletest/include" -I"/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/Test 19_20/Code/lib/googletest-master/googletest" 
+CXX_INCLUDES = -I"/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1 19_20/Code/lib/googletest-master/googletest/include" -I"/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1 19_20/Code/lib/googletest-master/googletest" 
 

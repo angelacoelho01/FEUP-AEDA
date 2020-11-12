@@ -1,4 +1,4 @@
-# Install script for directory: /home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/Test 19_20/Code
+# Install script for directory: /home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1 19_20/Code
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/Test 19_20/Code/cmake-build-debug/lib/googletest-master/cmake_install.cmake")
+  include("/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1 19_20/Code/cmake-build-debug/lib/googletest-master/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/Test 19_20/Code/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1 19_20/Code/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
