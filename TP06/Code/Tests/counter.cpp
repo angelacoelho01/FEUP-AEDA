@@ -4,71 +4,73 @@
 #include "exceptions.h"
 using namespace std;
 
-//TODO
-Client::Client() {
+
+Client::Client() : numGifts(rand() % 5 + 1){
 }
 
-//TODO
 unsigned Client::getNumGifts() const {
-    return 0;
+    return numGifts;
 }
 
 
-//TODO
-Counter::Counter(unsigned wt): wrappingTime(wt) {
+Counter::Counter(unsigned wt)
+    : clients(queue<Client>()), wrappingTime(wt), actualTime(0),
+    nextEnter(rand() % 20 + 1), nextLeave(0), numAttendedClients(0) {
 }
 
-//TODO
 unsigned Counter::getActualTime() const {
-    return 0;
+    return actualTime;
 }
 
-//TODO
 unsigned Counter::getNextEnter() const {
-    return 0;
+    return nextEnter;
 }
 
-//TODO
 unsigned Counter::getNumAttendedClients() const {
-    return 0;
+    return numAttendedClients;
 }
 
-//TODO
 unsigned Counter::getWrappingTime() const {
-    return 0;
+    return wrappingTime;
 }
 
-//TODO
 unsigned Counter::getNextLeave() const {
-    return 0;
+    return nextLeave;
 }
 
-//TODO
 Client & Counter::getNextClient() {
-    Client *cl = new Client();
-    return *cl;
+    if(clients.empty()) throw EmptyQueue();
+    return clients.front();
 }
 
-//TODO
-void Counter::enter()
-{
+void Counter::enter(){
+    Client client;
+    nextEnter = rand() % 20 + 1;
+    if(clients.empty()) nextLeave = (actualTime + client.getNumGifts()) * wrappingTime;
+    clients.push(client);
+    cout << "actualTime =  " << actualTime << ", numGifts = " << client.getNumGifts() << endl;
 }
 
-//TODO
-void Counter::leave()
-{
+void Counter::leave(){
+    if(clients.empty()) throw EmptyQueue();
+    Client clientRemove = getNextClient();
+    clients.pop();
+    nextLeave = (actualTime + clientRemove.getNumGifts()) * wrappingTime;
+    cout << "actualTime =  " << actualTime << ", numGifts = " << clientRemove.getNumGifts() << endl;
 }
 
-//TODO
-void Counter:: nextEvent()
-{
+void Counter:: nextEvent(){
+    if((nextLeave <= nextEnter) && (!clients.empty())) {
+        leave();
+        actualTime += nextLeave;
+    }
+    else {
+        enter();
+        actualTime += nextEnter;
+    }
 }
 
-
-//TODO
-ostream & operator << (ostream & out, const Counter & c2)
-{
-     return out;
+ostream & operator << (ostream & out, const Counter & c2){
+    out << "Number of attended clients: " << c2.getNumAttendedClients() << " Number of clients waiting: " << c2.clients.size() << endl;
+    return out;
 }
-
-

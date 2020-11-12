@@ -47,7 +47,9 @@ TEST(test_1, StackExt_FindMin){
     // preparing data to test execution test
     int size = 9;
     unsigned int elapsedTime[size];
-    int x_el[] = {5000000,6000000,7000000,8000000,9000000,10000000,11000000,12000000,13000000};
+    //int x_el[] = {5000000,6000000,7000000,8000000,9000000,10000000,11000000,12000000,13000000};
+    int x_el[] = {5000,6000,7000,8000,9000,1000,1100,1200,1300};
+
     int random_int;
     ticks tstart;
     ticks tend;

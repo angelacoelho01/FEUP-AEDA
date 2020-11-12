@@ -5,8 +5,11 @@ using namespace std;
 
 template <class T>
 class StackExt {
+private:
+    stack<T> _stack;
+    stack<T> _stackMin;
 public:
-	StackExt() {};
+	StackExt();
 	bool empty() const; 
 	T &top();
 	void pop();
@@ -14,38 +17,39 @@ public:
 	T &findMin();
 };
 
-// a alterar
+template <class T>
+StackExt<T>::StackExt() : _stack(stack<T>()), _stackMin(stack<T>()){}
+
 template <class T> 
-bool StackExt<T>::empty() const
-{
-	return true;
+bool StackExt<T>::empty() const{
+    return _stack.empty();
 }
 
 //a alterar
 template <class T> 
-T& StackExt<T>::top()
-{
-    T *novo = new T();
-    return *novo;
+T& StackExt<T>::top(){
+    /*T *novo = new T();
+    return *novo;*/
+    return _stack.top();
 }
 
 //a alterar
 template <class T> 
-void StackExt<T>::pop()
-{
+void StackExt<T>::pop(){
+    if(_stack.top() == _stackMin.top()) _stackMin.pop();
+    _stack.pop();
 }
 
 //a alterar
 template <class T> 
-void StackExt<T>::push(const T & val)
-{
+void StackExt<T>::push(const T & val){
+    if(_stack.empty() || val < _stackMin.top()) _stackMin.push(val);
+    _stack.push(val);
 }
 
 //a alterar
 template <class T> 
-T& StackExt<T>::findMin()
-{
-    T *novo = new T();
-    return *novo;
+T& StackExt<T>::findMin(){
+    return _stackMin.top();
 }
 
