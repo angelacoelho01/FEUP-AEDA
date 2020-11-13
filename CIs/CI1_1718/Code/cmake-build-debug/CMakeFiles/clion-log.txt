@@ -1,4 +1,4 @@
-/snap/clion/129/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code"
+/snap/clion/129/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code"
 -- The C compiler identification is GNU 9.3.0
 -- The CXX compiler identification is GNU 9.3.0
 -- Check for working C compiler: /usr/bin/cc
@@ -25,4 +25,4 @@
 -- Found Threads: TRUE  
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/cmake-build-debug
+-- Build files have been written to: /home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code/cmake-build-debug

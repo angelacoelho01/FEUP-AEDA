@@ -518,41 +518,9 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/Tests/Car.cpp
-Car.h
-/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/Tests/Car.h
-
-/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/Tests/Car.h
-string
--
-iostream
--
-
-/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/Tests/Garage.h
-vector
--
-algorithm
--
-numeric
--
-
-/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/Tests/Test.cpp
+/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code/main.cpp
 gtest/gtest.h
--
+/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code/gtest/gtest.h
 gmock/gmock.h
--
-Garage.h
-/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/Tests/Garage.h
-Car.h
-/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/Tests/Car.h
-vector
--
-string
--
-
-/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/main.cpp
-gtest/gtest.h
-/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/gtest/gtest.h
-gmock/gmock.h
-/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/gmock/gmock.h
+/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code/gmock/gmock.h
 

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/angela/CLionProjects/aeda1718_cp02/Tests/Doctor.h
+string
+-
+queue
+-
+
+/home/angela/CLionProjects/aeda1718_cp02/Tests/Hospital.cpp
+Hospital.h
+/home/angela/CLionProjects/aeda1718_cp02/Tests/Hospital.h
+
+/home/angela/CLionProjects/aeda1718_cp02/Tests/Hospital.h
+Doctor.h
+/home/angela/CLionProjects/aeda1718_cp02/Tests/Doctor.h
+list
+-
+stack
+-
+algorithm
+-
+

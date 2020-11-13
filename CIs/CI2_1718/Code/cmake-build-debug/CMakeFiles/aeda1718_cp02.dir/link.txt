@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/aeda1718_cp02.dir/main.cpp.o CMakeFiles/aeda1718_cp02.dir/Tests/Test.cpp.o CMakeFiles/aeda1718_cp02.dir/Tests/Doctor.cpp.o CMakeFiles/aeda1718_cp02.dir/Tests/Hospital.cpp.o  -o aeda1718_cp02  lib/libgtestd.a lib/libgtest_maind.a lib/libgtestd.a -lpthread 

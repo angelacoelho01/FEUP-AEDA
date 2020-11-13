@@ -68,10 +68,10 @@ RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code"
+CMAKE_SOURCE_DIR = "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_progress_start "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/cmake-build-debug/CMakeFiles" "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/cmake-build-debug/lib/googletest-master/CMakeFiles/progress.marks"
-	cd "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/cmake-build-debug/CMakeFiles" 0
+	cd "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_progress_start "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code/cmake-build-debug/CMakeFiles" "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code/cmake-build-debug/lib/googletest-master/CMakeFiles/progress.marks"
+	cd "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/clean
+	cd "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,17 +163,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/preinstall
+	cd "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/preinstall
+	cd "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/cmake-build-debug" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code/cmake-build-debug" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -199,6 +199,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CI1_1718/Code/cmake-build-debug" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/home/angela/Desktop/MIEIC/2nd Year/AEDA/FEUP-AEDA/CIs/CI1_1718/Code/cmake-build-debug" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
