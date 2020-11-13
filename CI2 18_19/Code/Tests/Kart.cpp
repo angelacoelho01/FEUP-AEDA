@@ -1,10 +1,3 @@
-#include <cstdlib>
-#include <iostream>
-#include <queue>
-#include <sstream>
-#include <vector>
-#include <time.h>
-#include <string>
 #include "Kart.h"
 
 using namespace std;
@@ -32,7 +25,6 @@ void CGrupo::criaGrupo()
     }
 }
 
-
 vector <CKart> CPista::getKartsAvariados()
 {
     vector<CKart> aux;
@@ -43,28 +35,48 @@ vector <CKart> CPista::getKartsAvariados()
 }
  
 //Exercicio 1 a)     
-vector<CKart> CGrupo::ordenaKarts()
-{
-	vector<CKart> vord;
-	return vord;
-    
+vector<CKart> CGrupo::ordenaKarts(){
+    vector<CKart> sortedKarts;
+	for(auto p : pistasG){
+	    for(auto k : p.getFrotaActual())
+	        sortedKarts.push_back(k);
+	}
+	sort(sortedKarts.begin(), sortedKarts.end(), [](CKart k1, CKart k2){
+	   return k1.getNumero() < k2.getNumero();
+	});
+	return sortedKarts;
 }
 
 //Exercicio 1 b)  
-int CGrupo::numAvariados(int cilind)
-{
-    return 0;
+int CGrupo::numAvariados(int cilind){
+    int kartsAvariados = 0;
+    for(auto& p : pistasG){
+        for(auto& k : p.getKartsAvariados()) {
+            if (((int)k.getCilindrada()) == cilind)
+                kartsAvariados++;
+        }
+    }
+    return kartsAvariados;
 }
 
 //Exercicio 1 c)   
-bool CPista::prepararCorrida(int numeroKarts, int cilind)
-{
+bool CPista::prepararCorrida(int numeroKarts, int cilind){
+    vector<CKart> selectedKarts;
+    for(auto& k : frotaKartsPista){
+        if(((int)k.getCilindrada()) == cilind && !k.getAvariado() && kartsLinhaPartida.size() <= numeroKarts)
+            kartsLinhaPartida.push(k);
+    }
+    if(kartsLinhaPartida.size() < numeroKarts) return false;
     return true;
 }
 
 //Exercicio 1 d) 
-int CPista::inicioCorrida()
-{
-    return 0;
+int CPista::inicioCorrida(){
+    int numKartsEmProva = 0;
+    while(!kartsLinhaPartida.empty()){
+        kartsEmProva.push_back(kartsLinhaPartida.front());
+        kartsLinhaPartida.pop();
+        numKartsEmProva++;
+    }
+    return numKartsEmProva;
 }
-

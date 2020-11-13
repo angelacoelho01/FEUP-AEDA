@@ -5,22 +5,25 @@
 #include <sstream>
 #include <vector>
 #include <time.h>
+#include <algorithm>
+#include <string>
 
 using namespace std;
 
 class CKart{
- 	string nome;
+    string nome;
     float cilindrada;
     int numero;
     bool avariado;
 public:
-	CKart(bool av,string no,int num,float cil){
-    	avariado = av; nome = no; numero = num; cilindrada = cil;}    
-	string getNome(){ return nome;}
-	float getCilindrada(){ return cilindrada;}
-	int getNumero(){ return numero;}
-	bool getAvariado(){ return avariado; }
+    CKart(bool av,string no,int num,float cil){
+        avariado = av; nome = no; numero = num; cilindrada = cil;}
+    string getNome(){ return nome;}
+    float getCilindrada(){ return cilindrada;}
+    int getNumero(){ return numero;}
+    bool getAvariado(){ return avariado; }
 };
+
 
 class CPista{
     string nomePista;
@@ -28,8 +31,8 @@ class CPista{
     queue <CKart> kartsLinhaPartida; //Karts prontos a partir
     vector<CKart> kartsEmProva; //Karts actualmente em prova
 public:
-	CPista(string nPista, vector <CKart> fKarts){
-    	nomePista = nPista;	frotaKartsPista = fKarts; }
+    CPista(string nPista, vector <CKart> fKarts){
+        nomePista = nPista;	frotaKartsPista = fKarts; }
     string getNome() { return nomePista; }
     vector <CKart> &getFrotaActual() {  return frotaKartsPista; }
     queue <CKart> getKartsLinhaPartida(){  return kartsLinhaPartida; }
@@ -39,16 +42,13 @@ public:
     int inicioCorrida();  //Ex 1d)
 };
 
+
 class CGrupo{
-   vector <CPista> pistasG;  //Pistas do Grupo
+    vector <CPista> pistasG;  //Pistas do Grupo
 public:
     void criaGrupo();
     vector <CPista> getPistas(){ return pistasG; }
-	void adicionaPista(CPista pista) { pistasG.push_back(pista); }
+    void adicionaPista(CPista pista) { pistasG.push_back(pista); }
     vector <CKart> ordenaKarts();  //Ex 1 a)
     int numAvariados(int cilind); //Ex 1 b)
 };
-
-
-
-
