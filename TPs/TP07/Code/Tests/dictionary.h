@@ -32,13 +32,14 @@ public:
 
 
 //TODO
-class WordInexistent
-{
+class WordInexistent{
+    iteratorBST<WordMeaning> _itBefore, _itAfter;
 public:
-    string getWordBefore() const { return ""; }
-    string getMeaningBefore() const { return ""; }
-    string getWordAfter() const { return ""; }
-    string getMeaningAfter() const { return ""; }
+    WordInexistent(iteratorBST<WordMeaning> itBefore, iteratorBST<WordMeaning> itAfter) : _itBefore(move(itBefore)), _itAfter(move(itAfter)){};
+    string getWordBefore() const { return _itBefore.operator*().getMeaning(); }
+    string getMeaningBefore() const { return _itBefore.operator*().getMeaning(); }
+    string getWordAfter() const { return _itAfter.operator*().getWord(); }
+    string getMeaningAfter() const { return _itAfter.operator*().getMeaning(); }
 };
 
 #endif
