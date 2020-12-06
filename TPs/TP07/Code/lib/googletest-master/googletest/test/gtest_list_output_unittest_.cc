@@ -31,9 +31,9 @@
 
 // Unit test for Google Test's --gtest_list_tests and --gtest_output flag.
 //
-// A user can ask Google Test to list all Tests that will run,
+// A user can ask Google Test to list all tests that will run,
 // and have the output saved in a Json/Xml file.
-// The Tests will not be run after listing.
+// The tests will not be run after listing.
 //
 // This program will be invoked from a Python unit test.
 // Don't run it directly.
@@ -43,6 +43,36 @@
 TEST(FooTest, Test1) {}
 
 TEST(FooTest, Test2) {}
+
+class FooTestFixture : public ::testing::Test {};
+TEST_F(FooTestFixture, Test3) {}
+TEST_F(FooTestFixture, Test4) {}
+
+class ValueParamTest : public ::testing::TestWithParam<int> {};
+TEST_P(ValueParamTest, Test5) {}
+TEST_P(ValueParamTest, Test6) {}
+INSTANTIATE_TEST_SUITE_P(ValueParam, ValueParamTest, ::testing::Values(33, 42));
+
+#if GTEST_HAS_TYPED_TEST
+template <typename T>
+class TypedTest : public ::testing::Test {};
+typedef testing::Types<int, bool> TypedTestTypes;
+TYPED_TEST_SUITE(TypedTest, TypedTestTypes);
+TYPED_TEST(TypedTest, Test7) {}
+TYPED_TEST(TypedTest, Test8) {}
+#endif
+
+#if GTEST_HAS_TYPED_TEST_P
+template <typename T>
+class TypeParameterizedTestSuite : public ::testing::Test {};
+TYPED_TEST_SUITE_P(TypeParameterizedTestSuite);
+TYPED_TEST_P(TypeParameterizedTestSuite, Test9) {}
+TYPED_TEST_P(TypeParameterizedTestSuite, Test10) {}
+REGISTER_TYPED_TEST_SUITE_P(TypeParameterizedTestSuite, Test9, Test10);
+typedef testing::Types<int, bool> TypeParameterizedTestSuiteTypes;  // NOLINT
+INSTANTIATE_TYPED_TEST_SUITE_P(Single, TypeParameterizedTestSuite,
+                               TypeParameterizedTestSuiteTypes);
+#endif
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);

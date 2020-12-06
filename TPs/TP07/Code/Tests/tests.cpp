@@ -100,7 +100,6 @@ TEST(test_1, d_CorrectDictionary){
     }
 }
 
-/*
 TEST(test_2, a_InitiateGame){
     vector<int> points;
     vector<bool> states;
@@ -111,9 +110,7 @@ TEST(test_2, a_InitiateGame){
     Game game1(2, points, states);
     EXPECT_EQ(1, game1.getGame().getRoot().getPoints());
 }
-*/
 
-/*
 TEST(test_2, b_WriteGame){
     vector<int> points;
     vector<bool> states;
@@ -131,9 +128,7 @@ TEST(test_2, b_WriteGame){
     string gameStr="1-true-0\n2-false-0\n3-false-0\n4-false-0\n5-false-0\n6-true-0\n7-false-0\n8-true-0\n9-true-0\n10-true-0\n11-true-0\n12-true-0\n13-true-0\n14-true-0\n15-true-0\n";
     EXPECT_EQ(gameStr, game1.writeGame());
 }
-*/
 
-/*
 TEST(test_2, c_DoMove){
     vector<int> points;
     vector<bool> states;
@@ -151,9 +146,7 @@ TEST(test_2, c_DoMove){
     EXPECT_EQ(13, game1.move());
     EXPECT_EQ(8,game1.move());
 }
-*/
 
-/*
 TEST(test_2, d_MostVisited){
     vector<int> points;
     vector<bool> states;
@@ -173,4 +166,3 @@ TEST(test_2, d_MostVisited){
     game1.move(); game1.move(); game1.move();game1.move();
     EXPECT_EQ(4, game1.mostVisited());
 }
-*/
