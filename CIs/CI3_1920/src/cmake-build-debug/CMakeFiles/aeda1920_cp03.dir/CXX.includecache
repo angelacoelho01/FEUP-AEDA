@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/angel/OneDrive/Desktop/MIEIC/2nd_year/1st_semester/AEDA/FEUP-AEDA/CIs/CI3_1920/src/Tests/Gallery.cpp
+Gallery.h
+C:/Users/angel/OneDrive/Desktop/MIEIC/2nd_year/1st_semester/AEDA/FEUP-AEDA/CIs/CI3_1920/src/Tests/Gallery.h
+ostream
+-
+algorithm
+-
+
+C:/Users/angel/OneDrive/Desktop/MIEIC/2nd_year/1st_semester/AEDA/FEUP-AEDA/CIs/CI3_1920/src/Tests/Gallery.h
+bst.h
+C:/Users/angel/OneDrive/Desktop/MIEIC/2nd_year/1st_semester/AEDA/FEUP-AEDA/CIs/CI3_1920/src/Tests/bst.h
+vector
+-
+unordered_set
+-
+queue
+-
+Paint.h
+C:/Users/angel/OneDrive/Desktop/MIEIC/2nd_year/1st_semester/AEDA/FEUP-AEDA/CIs/CI3_1920/src/Tests/Paint.h
+
+C:/Users/angel/OneDrive/Desktop/MIEIC/2nd_year/1st_semester/AEDA/FEUP-AEDA/CIs/CI3_1920/src/Tests/Paint.h
+string
+-
+ostream
+-
+
+C:/Users/angel/OneDrive/Desktop/MIEIC/2nd_year/1st_semester/AEDA/FEUP-AEDA/CIs/CI3_1920/src/Tests/bst.h
+iostream
+-
+stack
+-
+queue
+-
+
