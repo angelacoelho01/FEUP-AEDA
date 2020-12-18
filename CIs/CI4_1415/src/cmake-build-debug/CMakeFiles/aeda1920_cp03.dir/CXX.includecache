@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/angel/OneDrive/Desktop/MIEIC/2nd_year/1st_semester/AEDA/FEUP-AEDA/CIs/CI4_1415/src/Tests/BST.h
+iostream
+-
+stack
+-
+queue
+-
+
+C:/Users/angel/OneDrive/Desktop/MIEIC/2nd_year/1st_semester/AEDA/FEUP-AEDA/CIs/CI4_1415/src/Tests/Clinica.cpp
+Clinica.h
+C:/Users/angel/OneDrive/Desktop/MIEIC/2nd_year/1st_semester/AEDA/FEUP-AEDA/CIs/CI4_1415/src/Tests/Clinica.h
+algorithm
+-
+
+C:/Users/angel/OneDrive/Desktop/MIEIC/2nd_year/1st_semester/AEDA/FEUP-AEDA/CIs/CI4_1415/src/Tests/Clinica.h
+string
+-
+list
+-
+sstream
+-
+tr1/unordered_set
+-
+BST.h
+C:/Users/angel/OneDrive/Desktop/MIEIC/2nd_year/1st_semester/AEDA/FEUP-AEDA/CIs/CI4_1415/src/Tests/BST.h
+
